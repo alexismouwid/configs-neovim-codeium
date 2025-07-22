@@ -15,17 +15,18 @@ nnoremap <leader>o :!xdg-open % &<CR>
 let mapleader = " "
 
 "Guardar
-nnoremap <S-w> :w<CR>
+nnoremap <Leader>w :w<CR>
 "Forzar Guardado
-nnoremap <S-W> :w!<CR>
+nnoremap <Leader>W :w!<CR>
 "Salir
-nnoremap <S-q> :q<CR>
+nnoremap <Leader>q :q<CR>
 "Forzar guardado
-nnoremap <S-Q> :q!<CR>
+nnoremap <Leader>Q :q!<CR>
 
 " faster scrolling
-nnoremap <S-s> <C-d>
-
+nnoremap <Leader>s <C-d>
+" eliminar todo el texto
+nnoremap <S-x> ggVGd
 
 "Correr con node el archivo actual
 nnoremap <silent> <Leader>n :!node %<cr>
@@ -49,4 +50,4 @@ nnoremap <silent> <S-r> :Files<CR>
 nnoremap <S-x> ggVG"+y
 
 " Evita que Enter inserte una nueva línea si el menú de autocompletado está visible
-inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+nnoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
