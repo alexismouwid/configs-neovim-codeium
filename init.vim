@@ -23,20 +23,28 @@ set path+=**
 set suffixesadd+=.js,.jsx,.ts,.tsx,.css,.json
 set swapfile
 set directory=~/.local/state/nvim/swap//
+let g:NERDTreeWinPos = "right"
+ 
 
 "Elimina los archivos temporales de noevim
 autocmd VimEnter * silent! !rm -f ~/.local/state/nvim/swap/*
 set background=dark
 let g:gruvbox_contrast_dark = "dark"
 colorscheme gruvbox
+let g:lightline = {
+  \ 'colorscheme': 'gruvbox',
+  \ }
 " Evitar conflictos con Treesitter
 let g:gruvbox_improved_warnings = 1
 let g:gruvbox_invert_selection = 0
 
 " Establece el tipo de archivo como JavaScript React para archivos .jsx y .tsx
 autocmd BufRead,BufNewFile *.jsx,*.tsx set filetype=javascriptreact
-
-
+" === Configuración ===
+" Activar Comment.nvim (escrito en Lua)
+lua << EOF
+require('Comment').setup()
+EOF
 
 
 

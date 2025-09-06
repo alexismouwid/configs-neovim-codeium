@@ -10,5 +10,5 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd BufEnter * if winnr("$") == 1 && exists("b:NERDTree") | quit | endif
 
 " Cerrar NERDTree al abrir un archivo
-autocmd BufEnter * if &ft != 'nerdtree' && exists('t:NERDTreeBufName') | NERDTreeClose | endif
+"autocmd BufEnter * if &ft != 'nerdtree' && exists('t:NERDTreeBufName') | NERDTreeClose | endif
 

@@ -15,18 +15,20 @@ nnoremap <leader>o :!xdg-open % &<CR>
 let mapleader = " "
 
 "Guardar
-nnoremap <Leader>w :w<CR>
+nnoremap <leader>w :w<CR>
 "Forzar Guardado
-nnoremap <Leader>W :w!<CR>
+nnoremap <leader>W :w!<CR>
 "Salir
-nnoremap <Leader>q :q<CR>
+nnoremap <leader>q :q<CR>
 "Forzar guardado
-nnoremap <Leader>Q :q!<CR>
+nnoremap <leader>Q :q!<CR>
 
 " faster scrolling
-nnoremap <Leader>s <C-d>
-" eliminar todo el texto
-nnoremap <S-x> ggVGd
+nnoremap <S-s> <C-d>
+
+
+" Ejecutar archivo Python en una terminal dividida
+nnoremap <leader>p :w<CR>:botright vsplit term://python3 %<CR>
 
 "Correr con node el archivo actual
 nnoremap <silent> <Leader>n :!node %<cr>
@@ -50,4 +52,4 @@ nnoremap <silent> <S-r> :Files<CR>
 nnoremap <S-x> ggVG"+y
 
 " Evita que Enter inserte una nueva línea si el menú de autocompletado está visible
-nnoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
